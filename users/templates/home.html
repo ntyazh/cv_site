@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашняя страница</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" name="btn sign in">Войти</button>
+
+        <button type="submit" name="btn sign up">Зарегистрироваться</button>
+    </form>
+</body>
+</html>

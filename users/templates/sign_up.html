@@ -1,0 +1,10 @@
+<body>
+<p>Зарегистрироваться</p>
+<form method="post">
+  {% csrf_token %}
+  {{ form }}
+  <button type="submit">Зарегистрироваться</button>
+</form>
+</body>
+
+
