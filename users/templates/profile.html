@@ -5,6 +5,20 @@
     <title>Profile</title>
 </head>
 <body>
-    <p><strong>Username: {{user.username}}</strong></p>
+    <p>Username: {{user.username}}</p>
+    <form method="post">
+        {% csrf_token %}
+        <p> Name {{ form.name }} </p>
+        <p> Surname {{ form.surname }} </p>
+        <p> Phone number {{ form.phone_number }}</p>
+        <p> Email-address {{ form.email }}</p>
+        <p> Address {{ form.address }}</p>
+        <p> Education level {{ form.education_level }}</p>
+        <p> Accomplished educational institutions {{ form.educational_institutions}}</p>
+        <p> Skills {{ form.skills }}</p>
+        <p> Work experience {{ form.work_experience}}</p>
+
+        <button class="btn btn-primary" type="submit">Create cv</button>
+    </form>
 </body>
 </html>

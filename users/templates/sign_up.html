@@ -1,9 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+</head>
 <body>
-<p>Зарегистрироваться</p>
 <form method="post">
   {% csrf_token %}
-  {{ form }}
-  <button type="submit">Зарегистрироваться</button>
+  <p> Username: {{ form.username }} </p>
+  <p> Password: {{ form.password1 }} </p>
+  <p> Repeat password: {{ form.password2 }}</p>
+
+  <button type="submit">Sign up</button>
 </form>
 </body>
 

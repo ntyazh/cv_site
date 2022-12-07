@@ -20,8 +20,12 @@ from users.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('sign_in', SignIn.as_view(), name="sign_in"),
-    path('sign_up', SignUp.as_view(), name="sign_up"),
+    path('sign_out', SignOut.as_view(), name="sign_out"),
+    path('sign_up', sign_up, name="sign_up"),
     path('', Home.as_view(), name='home'),
-    path('accounts/profile/<int:pk>/', Profile.as_view(), name='profile')
+    path('profile', profile, name="profile"),
+    path('cv', cv, name="cv"),
+    path('download', download, name="download"),
+    path('access_denied', access_denied, name="access_denied")
 ]
 

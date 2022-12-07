@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Домашняя страница</title>
+    <title>Home page</title>
 </head>
 <body>
     <form method="post">
         {% csrf_token %}
-        {{ form }}
-        <button type="submit" name="btn sign in">Войти</button>
-
-        <button type="submit" name="btn sign up">Зарегистрироваться</button>
+        <h1> Welcome, {{ user.username|default:"guest" }}! </h1>
+        <button type="submit" name="btn sign in">Sign in</button>
+        <button type="submit" name="btn sign up">Sign up</button>
+        <button type="submit" name="btn sign out">Sign out</button>
+        <button type="submit" name="btn go to profile">Create cv</button>
     </form>
 </body>
 </html>

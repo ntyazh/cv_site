@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Created cv</title>
+</head>
+<body>
+
+<h1>  {{ name }} {{ surname }} </h1>
+<h3> Phone number: </h3> <font size="4"> {{ phone_number }} </font>
+<h3> Address: </h3> <font size="4"> {{ address }} </font>
+<h3> Email-address: </h3> <font size="4"> {{ email }} </font>
+<h3> Education level: </h3> <font size="4"> {{ education_level }} </font>
+<h3> Accomplished educational institutions: </h3> <font size="4"> {{ educational_institutions }} </font>
+<h3> Skills: </h3> <font size="4"> </font> {{ skills }}
+<h3> Work experience: </h3> <font size="4"> </font> {{ work_experience }}
+<p> <a  href="{% url 'download' %}"> <font size="3"> Download </font> </a> </p>
+</body>
+</html>
